@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": [
+				"//assets",
+				"//packs",
+				"//minecraft-tweaks",
+				"//minetower.github.io",
+				"//ui-components",
+			]
+		},
+		{ "path": "assets" },
+		{ "path": "minecraft-tweaks" },
+		{ "path": "packs" },
+		{ "path": "minetower.github.io" },
+		{ "path": "ui-components" },
+	]
+}

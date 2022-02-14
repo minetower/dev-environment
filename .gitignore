@@ -1,0 +1,12 @@
+# repos
+/assets
+/minecraft-tweaks
+/minetower.github.io
+/packs
+/ui-components
+
+# other
+/other-resources
+/svelte-snowpack-template
+
+*.sublime-workspace

@@ -1,0 +1,17 @@
+# huge folders
+**/build/
+**/node_modules/
+
+# not needed folders
+/other-resources
+/scripts
+/svelte-snowpack-template
+/ui-components
+
+# 'build' folder with scripts
+!/packs/scripts/build
+
+**/.git/
+
+*.sublime-*
+*.md
