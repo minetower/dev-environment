@@ -25,7 +25,7 @@ cd minetower
 # you must clone at least without '--needed' argument
 ./scripts/clone.sh
 
-docker-compose up site
+docker-compose up -d site
 ```
 
 Open http://localhost:8080
