@@ -24,15 +24,12 @@ for i in "$@"; do
 			minecraft-tweaks )
 				clone_repos=("${needed_minecraft_tweaks[@]}");;
 			* )
-			echo "Not found repo \"$REPO\""
-			exit;;
+				echo "Not found repo \"$REPO\""
+				exit;;
 		esac
 		shift;;
 	--ssh )
-		url='git@github.com:minetower'
-
-		echo 'Starting ssh-agent for 5 minutes'
-		ssh-agent -t 5m || echo 'Cannot start ssh-agent'
+		SSH=true
 		shift;;
 	--all )
 		clone_repos=("${clone_repos[@]}" "${optional_repos[@]}")
@@ -44,6 +41,13 @@ for i in "$@"; do
 		shift;;
 	esac
 done
+
+if [[ $SSH ]]; then
+	url='git@github.com:minetower'
+
+	echo 'Starting ssh-agent for 5 minutes'
+	ssh-agent -t 5m || echo 'Cannot start ssh-agent'
+fi
 
 # clone
 for repo in "${clone_repos[@]}"; do
