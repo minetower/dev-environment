@@ -8,5 +8,8 @@ services:
     environment:
      - NGINX_PORT=8080
     command: [nginx, '-g', 'daemon off;']
+    logging:
+      options:
+        max-size: '10m'
     volumes:
      - ./config/nginx/templates:/etc/nginx/templates

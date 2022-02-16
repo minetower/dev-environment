@@ -1,6 +1,6 @@
 FROM node:alpine AS builder
 
-RUN apk --no-cache add git
+RUN apk add git
 WORKDIR /src
 
 FROM builder AS root_builder
@@ -10,6 +10,7 @@ COPY ./minetower.github.io ./
 RUN yarn build
 
 FROM builder AS packs_builder
+RUN apk add imagemagick
 COPY ./packs/package.json ./packs/yarn.lock ./
 RUN yarn install --frozen-lockfile
 COPY ./packs ./
