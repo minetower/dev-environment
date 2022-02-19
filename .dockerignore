@@ -1,5 +1,5 @@
 # huge folders
-**/build/
+/*/build/ # at second level
 **/node_modules/
 
 # not needed folders
@@ -7,9 +7,6 @@
 /scripts
 /svelte-vite-template
 /ui-components
-
-# 'build' folder with scripts
-!/packs/scripts/build
 
 **/.git/
 
