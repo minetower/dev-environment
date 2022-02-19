@@ -5,7 +5,7 @@
 # not needed folders
 /other-resources
 /scripts
-/svelte-snowpack-template
+/svelte-vite-template
 /ui-components
 
 # 'build' folder with scripts

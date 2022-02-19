@@ -7,6 +7,6 @@
 
 # other
 /other-resources
-/svelte-snowpack-template
+/svelte-vite-template
 
 *.sublime-workspace
