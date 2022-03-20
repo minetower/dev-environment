@@ -46,7 +46,8 @@ if [[ $SSH ]]; then
 	url='git@github.com:minetower'
 
 	echo 'Starting ssh-agent for 5 minutes'
-	ssh-agent -t 5m || echo 'Cannot start ssh-agent'
+	eval $(ssh-agent -t 5m || echo 'Cannot start ssh-agent')
+	ssh-add
 fi
 
 # clone
